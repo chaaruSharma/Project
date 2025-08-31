@@ -625,3 +625,9 @@ background-color: var(--light-gray);
   background-color: var(--accent-color);
   color: white;
 }
+/* .footer-container{
+  background-color: var(--dark-gray);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+} */
