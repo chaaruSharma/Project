@@ -23,6 +23,7 @@ body{
     
     padding: 2rem;
 }
+
 .header-content{
   display:flex;
   justify-content: space-between;
@@ -343,6 +344,15 @@ image{
     margin-top: 8rem;
   }
 }
+.background{
+background-color: var(--light-gray);
+  width: 100%;
+  height: auto;
+  
+  padding-top: 3rem;
+  padding-right: rem;
+  ;
+}
 
 .feature-container{
   text-align: center;
@@ -350,6 +360,7 @@ image{
   padding-left: 300px;
   margin: 0%;
   padding-top: 0%;
+  /* background-color: var(--light-gray); */
 }
 
 .main-info{
@@ -357,9 +368,11 @@ image{
   font-weight: 700;
 }
 .feature-description{
-  font-size: 20px;
+  font-size: 17px;
   color: var(--dark-gray);
+  padding-bottom: 1rem;
   padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .feature-grid{
@@ -396,7 +409,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .card2{
@@ -404,7 +417,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .card3{
@@ -412,7 +425,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .card4{
@@ -420,7 +433,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .card5{
@@ -428,7 +441,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .card6{
@@ -436,7 +449,7 @@ image{
   align-items: center;
   text-align: center;
   color: white;
-  height: 200px;
+  height: 210px;
   padding: 3rem;
 }
 .img{
@@ -449,7 +462,7 @@ image{
     height: auto;
     width: 100%;
     margin-top: 1rem;
-    background-color: var(--light-gray);
+    /* background-color: var(--light-gray); */
   }
   .feature-container{
     display: flex;
@@ -506,4 +519,63 @@ image{
 .feature-description{
   font-size: 15px; /* color: var(--gray); */
 }
+.background{
+  background-color: var(--light-gray);
+  
+}
+}
+.newsletter{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  margin-top: 6rem ;
+  
+  
+}
+.review-section{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  /* flex-wrap: wrap; */
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  width: 500px;;
+  margin-top: 1rem;
+  background-color: var(--light-gray);
+  border: 1px solid #0a0a0a;
+  border-radius: 15px;
+}
+
+
+.img-review{
+    height: 50px;
+   width: 50px;
+   display: block;
+  margin-left: auto;
+   margin-right: auto; 
+  border-radius: 15px;
+  margin-top: auto;
+  /* margin-bottom: 0rem; */
+  /* padding-bottom: 1rem; */
+
+}
+.description{
+  font-size: 20px;
+  color: var(--dark-gray);
+  padding: 1rem;
+}
+.name-review{
+  color: var(--accent-color);
+}
+.name{
+  padding-bottom: 2rem;
+  font-size: 15px;
 }
