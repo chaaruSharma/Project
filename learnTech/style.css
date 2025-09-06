@@ -649,7 +649,7 @@ card:hover{
 
 
 .footer-container{
-  background-color: #939090
+  /* background-color: #939090 */
   padding: 1.5rem 0;
   max-width: 100vw;
   display: flex;
