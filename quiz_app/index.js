@@ -1,4 +1,8 @@
-const { questionNewPassword } = require("readline-sync");
+let count=0;
+let kuler=required("kuler");
+const readlineSync=require("readline-sync");
+let username=readlineSync.question("enter your name");
+console.log(kuler(`Hello, ${username} welcome to quizify`,));
 
 const database={
      quiz:[
@@ -42,15 +46,68 @@ const database={
     ]
 }
 
-function showQuestion (){
-    for(let i=0;i<database.quiz.length;i++){
-    console.log(`Q${i+1}`)
+const leaderboard={
+    data:[
+        {
+            name: "ashish",
+            score: 1
+        },
+        {
+            name:"riya",
+            score: 2,
+        },
+        {
+            name:"jay",
+            score:3,
+        },
+        {
+            name:"ashish",
+            score:4
+        }
 
-     console.log(`${database.quiz[i].questions}`);
+    ]
+}
+
+
+function logic(userAnswer,answer){
+    if(userAnswer==answer){
+        console.log("your answer is correct");
+        console.log(`correct answer : ${answer}`);
+        count++;
+    }
+    else{
+        console.log("wrong answer");
+        console.log(`your correct answer is ${answer}`);
+    }
+}
+
+
+
+function showQuestion (database){
+    for(let i=0;i<database.quiz.length;i++){
+    console.log(`\nQ${i+1}-${database.quiz[i].questions}\n`)
+
+     
      for(let key in database.quiz[i].options){
-        console.log(`${key}:${database.quiz[i].options[key]}`);
-        const readlineSync=require('readline-sync');
-        let username=readlineSync.question("write your option here : ");
-     }}
+        console.log(`${key}:${database.quiz[i].options[key]}`)}
+       
+       
+        let userAnswer=readlineSync.question("write your option here : ").toLowerCase();
+        logic(userAnswer,database.quiz[i].answer)
+     }
+    console.log(`your score is  : ${count}`);
+
 }       
-showQuestion();
+
+function highScorer(leaderboard){
+    leaderboard.data.push({ name:username,score:count})
+    
+    let sortedScore=leaderboard.data.sort((a,b)=>b.score-a.score);
+   console.log("\n check your position on leader board");
+    for(let leader of sortedScore){
+        console.log(`${leader.name} - score: ${leader.score}`);
+    }
+}
+showQuestion(database);
+highScorer(leaderboard);
+
