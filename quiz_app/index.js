@@ -1,8 +1,9 @@
 let count=0;
-let kuler=required("kuler");
-const readlineSync=require("readline-sync");
-let username=readlineSync.question("enter your name");
-console.log(kuler(`Hello, ${username} welcome to quizify`,));
+let readlineSync=require("readline-sync");
+let kuler=require("kuler");
+
+let username=readlineSync.question("enter your name : ");
+console.log(kuler(`Hello, ${username} welcome to quizify`,"#b8663b"));
 
 const database={
      quiz:[
@@ -12,7 +13,7 @@ const database={
                 a:"false",
                 b:"true",
                 c:"undefined",
-                d:"error"
+                d:"error",
             },
             answer:"a"
         },
@@ -72,12 +73,12 @@ const leaderboard={
 function logic(userAnswer,answer){
     if(userAnswer==answer){
         console.log("your answer is correct");
-        console.log(`correct answer : ${answer}`);
+        console.log(kuler(`correct answer : ${answer}`,"#22c55e"));
         count++;
     }
     else{
         console.log("wrong answer");
-        console.log(`your correct answer is ${answer}`);
+        console.log(kuler(`your correct answer is ${answer}`,"#22c55e"));
     }
 }
 
@@ -103,9 +104,9 @@ function highScorer(leaderboard){
     leaderboard.data.push({ name:username,score:count})
     
     let sortedScore=leaderboard.data.sort((a,b)=>b.score-a.score);
-   console.log("\n check your position on leader board");
+   console.log(kuler("\n check your position on leader board 😂💕","#facc15"));
     for(let leader of sortedScore){
-        console.log(`${leader.name} - score: ${leader.score}`);
+        console.log(kuler(`${leader.name} - score: ${leader.score}`,"#6ee7b7"));
     }
 }
 showQuestion(database);
