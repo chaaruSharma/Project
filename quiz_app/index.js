@@ -77,7 +77,7 @@ function logic(userAnswer,answer){
         count++;
     }
     else{
-        console.log("wrong answer");
+        console.log(kuler(`wrong answer`,"#dd6f6fff"));
         console.log(kuler(`your correct answer is ${answer}`,"#22c55e"));
     }
 }
