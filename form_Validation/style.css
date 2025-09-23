@@ -1,0 +1,19 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqdMPSUobqm-7KslN-d0gdmOgrXHThFUVsA&s);
+   -webkit-background-size: cover;
+   background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+label{
+    size:22px;
+
+}
+span{
+   font-size: 18px; 
+}
+*{
+    margin:auto;
+     padding:5px; }
