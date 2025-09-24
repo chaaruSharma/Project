@@ -39,5 +39,84 @@ function jsFun(event) {
     document.getElementById('usererror').innerHTML = "";
 }
 
-
+if(password.trim() ===""){
+    document.getElementById('passerror').innerHTML = "Password cannot be empty";
+    return false;
+}else if(!passReg.test(password)){
+    document.getElementById('passerror').innerHTML = "Please enter valid password";
+    return false;
+}else{
+    document.getElementById('passerror').innerHTML = "";
 }
+if(confirm_pass.trim() ===""){
+    document.getElementById('confirm_passerror').innerHTML = "Confirm Password cannot be empty";
+    return false;
+}else if(password !== confirm_pass){
+    document.getElementById('confirm_passerror').innerHTML = "Passwords do not match";
+    return false;
+}else{
+    document.getElementById('confirm_passerror').innerHTML = "";
+}
+if(mail.trim() ===""){
+    document.getElementById('mailerror').innerHTML = "Email cannot be empty";
+    return false;
+}else if(!mailReg.test(mail)){
+    document.getElementById('mailerror').innerHTML = "Please enter valid email";
+    return false;
+}else{
+    document.getElementById('mailerror').innerHTML = "";
+}
+if(card.trim() ===""){
+    document.getElementById('carderror').innerHTML = "Card cannot be empty";
+    return false;
+}else if(!cardReg.test(card)){
+    document.getElementById('carderror').innerHTML = "Please enter valid card number";
+    return false;
+}else{
+    document.getElementById('carderror').innerHTML = "";
+}
+if(phone.trim() ===""){
+    document.getElementById('phoneerror').innerHTML = "Phone cannot be empty";
+    return false;
+}else if(!phoneReg.test(phone)){
+    document.getElementById('phoneerror').innerHTML = "Please enter valid phone number";
+    return false;
+}else{
+    document.getElementById('phoneerror').innerHTML = "";
+}
+return true;
+}let formData= document.querySelector(".form");
+let submitButton= document.querySelector(".button");
+let errormsg= document.querySelector(".error-message");
+let firstName, lastName, email, password,field;
+
+formData.addEventListener("keyup", (e)=>{
+    e.preventDefault();
+    field=e.target.dataset.key;
+    switch(field){
+        case "firstName":
+            firstName=e.target.value;
+            break;
+            case "lastName":
+            lastName=e.target.value;
+            break;
+            case "email":
+            email=e.target.value;
+            break;
+            case "password":
+            password=e.target.value;
+            break;
+            default:
+            lastName=firstName=email=password="";
+            break;
+
+    }
+});
+
+submitButton.addEventListener("click", (e)=>{
+    e.preventDefault();
+    console.log(firstName, lastName, email, password);
+});
+
+
+    
